@@ -8,7 +8,7 @@ layout: layouts/base.njk
     <h1>{{ title }}</h1>
 
     {% if image %}
-      <img class="post-hero-image" src="{{ image }}" alt="{{ imageAlt | default: title }}">
+      <img class="post-hero-image" src="{{ image }}" alt="{{ imageAlt }}">
     {% endif %}
 
     <div class="post-content">
