@@ -1,14 +1,6 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Our Story | WDR5 Connect</title><link rel="stylesheet" href="/assets/styles.css">  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</head><body><header class="site-header"><a class="brand" href="index.html"><span class="logo">♡</span><span><strong>WDR5 Connect</strong><small>Connecting families. Sharing hope.</small></span></a><nav><a href="index.html">Home</a><a href="about.html">About WDR5</a><a href="story.html">Our Story</a><a href="updates.html">Updates</a><a href="resources.html">Resources</a><a href="contact.html">Contact</a><a class="button small" href="registry.html">Join the Registry</a></nav></header><main><section class="page-hero"><h1>Our family’s story</h1><p>Replace this page with your son’s journey, written in your own words.</p></section><section class="content"><div class="panel"><h2>Diagnosis journey</h2><p>Write about the first signs, appointments, genetic testing and how you felt when the diagnosis came through.</p></div><div class="panel"><h2>Life now</h2><p>Share therapies, school or nursery, communication, seizures, behaviour, progress, challenges and the small wins.</p></div><div class="panel"><h2>Why we created WDR5 Connect</h2><p>We created this website so families searching for WDR5 can find another family, share experiences and feel less alone.</p></div></section></main><footer><p>© <span id="year"></span> WDR5 Connect. Family-led information, not medical advice.</p></footer><script src="assets/site.js"></script>
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
-</body></html>
+---
+layout: layouts/base.njk
+title: Our Story | WDR5 Connect
+---
+<section class="page-hero"><div class="container"><h1>Our Story</h1><p class="lead">Why we created WDR5 Connect.</p></div></section>
+<section class="section"><div class="container narrow"><p>Use this page to share your son’s journey, diagnosis and what you have learned so far.</p><div class="timeline"><div><strong>Early concerns</strong><p>Add your family timeline here.</p></div><div><strong>Diagnosis</strong><p>Explain how the diagnosis came about.</p></div><div><strong>Today</strong><p>Share current therapies, progress and hopes.</p></div></div></div></section>

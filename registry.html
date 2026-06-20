@@ -1,14 +1,6 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Family Registry | WDR5 Connect</title><link rel="stylesheet" href="/assets/styles.css">  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</head><body><header class="site-header"><a class="brand" href="index.html"><span class="logo">♡</span><span><strong>WDR5 Connect</strong><small>Connecting families. Sharing hope.</small></span></a><nav><a href="index.html">Home</a><a href="about.html">About WDR5</a><a href="story.html">Our Story</a><a href="updates.html">Updates</a><a href="resources.html">Resources</a><a href="contact.html">Contact</a><a class="button small" href="registry.html">Join the Registry</a></nav></header><main><section class="page-hero"><h1>Join the family registry</h1><p>A private way for affected families to connect and help build knowledge of WDR5 worldwide.</p></section><section class="content"><div class="panel"><h2>What we collect</h2><ul><li>Parent or carer name</li><li>Email address</li><li>Country</li><li>Child’s age range</li><li>Whether diagnosis has been genetically confirmed</li><li>Consent to be contacted</li></ul><p class="notice">Do not collect detailed medical records on a public GitHub site. Use a private form service such as Tally, Google Forms, Airtable Forms or Formspree.</p></div><div class="form-embed"><h2>Registry form placeholder</h2><p>Replace this box with your Tally/Formspree/Google Form embed code.</p><a class="button" href="https://tally.so" target="_blank" rel="noopener">Create a Tally form</a></div></section></main><footer><p>© <span id="year"></span> WDR5 Connect. Family-led information, not medical advice.</p></footer><script src="assets/site.js"></script>
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
-</body></html>
+---
+layout: layouts/base.njk
+title: Family Registry | WDR5 Connect
+---
+<section class="page-hero"><div class="container"><h1>Join the Family Registry</h1><p class="lead">Help us connect families affected by WDR5-related disorder.</p></div></section>
+<section class="section"><div class="container narrow"><p>Use this page to link to your Tally/Formspree registry form. Avoid publishing personal medical details publicly.</p><a class="button primary" href="#">Open registry form</a></div></section>
