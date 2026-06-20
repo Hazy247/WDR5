@@ -1,5 +1,5 @@
 backend:
-  name: git gateway
+  name: git-gateway
   repo: Hazy247/WDR5
   branch: main
 
