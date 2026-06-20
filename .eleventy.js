@@ -1,7 +1,7 @@
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("assets");
-  eleventyConfig.addPassthroughCopy("admin");
-  eleventyConfig.addPassthroughCopy("uploads");
+  eleventyConfig.addPassthroughCopy({ "assets": "assets" });
+  eleventyConfig.addPassthroughCopy({ "admin": "admin" });
+  eleventyConfig.addPassthroughCopy({ "uploads": "uploads" });
 
   const readableDate = function (dateObj) {
     if (!dateObj) return "";
