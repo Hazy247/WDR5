@@ -12,12 +12,11 @@ permalink: /updates/
 </section>
 
 <section class="section">
-  <div class="container updates-layout">
+  <div class="container updates-layout original-updates-layout">
     <div class="updates-main">
-      <div class="updates-grid">
-        {% assign sortedUpdates = collections.update | reverse %}
-        {% for post in sortedUpdates %}
-          <article class="update-card">
+      <div class="updates-grid original-updates-grid">
+        {% for post in collections.update %}
+          <article class="update-card original-update-card">
             {% if post.data.image %}
               <a href="{{ post.url | url }}" class="update-card-image-link">
                 <img class="update-card-image" src="{{ post.data.image }}" alt="{{ post.data.imageAlt | default: post.data.title }}">
@@ -30,29 +29,31 @@ permalink: /updates/
               <p class="update-date">{{ post.date | readableDate }}</p>
               <h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
               <p>{{ post.data.summary }}</p>
-              <a class="text-link" href="{{ post.url | url }}">Read update →</a>
+              <a class="text-link" href="{{ post.url | url }}">Read more →</a>
             </div>
           </article>
         {% endfor %}
       </div>
+
+      <div class="share-update-card">
+        <div>
+          <h2>Have an update to share?</h2>
+          <p>Share your story or update with other families in the WDR5 community.</p>
+        </div>
+        <a class="button" href="/WDR5/contact/">Share your update</a>
+      </div>
     </div>
 
-    <aside class="updates-sidebar">
+    <aside class="updates-sidebar original-sidebar">
       <div class="side-card">
         <h2>Categories</h2>
         <p>All Updates<br>Family Stories<br>Research<br>Community News<br>Resources</p>
       </div>
 
       <div class="side-card">
-        <h2>Join the mailing list</h2>
-        <p>Get occasional updates when new posts are published.</p>
+        <h2>Stay connected</h2>
+        <p>Join our email list to receive updates and community news.</p>
         <a class="button" href="/WDR5/contact/">Join mailing list</a>
-      </div>
-
-      <div class="side-card">
-        <h2>Have an update to share?</h2>
-        <p>Share your story or update with other families in the WDR5 community.</p>
-        <a class="button secondary" href="/WDR5/contact/">Share your update</a>
       </div>
     </aside>
   </div>
