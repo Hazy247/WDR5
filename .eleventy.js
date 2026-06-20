@@ -3,6 +3,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "admin": "admin" });
   eleventyConfig.addPassthroughCopy({ "uploads": "uploads" });
 
+  eleventyConfig.addCollection("update", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("updates/**/*.{md,html}")
+      .filter(item => !item.inputPath.includes("TEMPLATE"))
+      .sort((a, b) => b.date - a.date);
+  });
+
   const readableDate = function (dateObj) {
     if (!dateObj) return "";
     const date = new Date(dateObj);
