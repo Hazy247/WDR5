@@ -1,6 +1,6 @@
 backend:
-  name: github
-  repo: YOUR-GITHUB-USERNAME/YOUR-REPOSITORY-NAME
+  name: git gateway
+  repo: Hazy247/WDR5
   branch: main
 
 media_folder: "assets/images/uploads"
