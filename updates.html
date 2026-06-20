@@ -1,30 +1,29 @@
 ---
 layout: layouts/base.njk
-title: Updates | WDR5 Connect
-pagination:
-  data: collections.updates
-  size: 100
-  alias: posts
+title: Updates
 ---
-<section class="page-hero"><div class="container"><h1>Updates</h1><p class="lead">Family updates, research notes and community news.</p></div></section>
+<section class="page-hero"><div class="container"><p class="eyebrow">Community news</p><h1>Updates</h1><p>Family updates, research notes and community news.</p></div></section>
 <section class="section">
   <div class="container updates-layout">
     <div class="updates-main">
       <div class="updates-grid">
-        {% assign sortedPosts = collections.updates | reverse %}
-        {% for post in sortedPosts %}
+        {% assign posts = collections.update | reverse %}
+        {% for post in posts %}
         <article class="update-card">
-          <p class="date">{{ post.date | readableDate }}</p>
-          <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-          {% if post.data.summary %}<p>{{ post.data.summary }}</p>{% endif %}
-          <a class="read-more" href="{{ post.url }}">Read update</a>
+          <div class="update-icon">♡</div>
+          <div class="update-body">
+            <time>{{ post.date | readableDate }}</time>
+            <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+            <p>{{ post.data.description }}</p>
+            <a class="read-more" href="{{ post.url }}">Read update →</a>
+          </div>
         </article>
         {% endfor %}
       </div>
     </div>
     <aside class="updates-sidebar">
-      <div class="side-card"><h2>Join the mailing list</h2><p>Get occasional updates when new posts are published.</p><a class="button secondary" href="#">Join mailing list</a></div>
-      <div class="side-card"><h2>Have an update to share?</h2><p>Families and researchers can contact us with news or resources.</p><a class="button secondary" href="/contact/">Contact us</a></div>
+      <div class="side-card"><h3>Join the mailing list</h3><p>Get occasional updates when new posts are published.</p><a class="button" href="/WDR5/contact/">Join mailing list</a></div>
+      <div class="side-card"><h3>Have an update to share?</h3><p>Share your story or update with other families in the WDR5 community.</p><a class="button secondary" href="/WDR5/contact/">Share your update</a></div>
     </aside>
   </div>
 </section>
