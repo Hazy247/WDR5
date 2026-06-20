@@ -1,17 +1,20 @@
 ---
 layout: layouts/base.njk
 ---
-<section class="page-hero">
-  <div class="container narrow">
-    <p class="eyebrow">Update</p>
-    <h1>{{ title }}</h1>
-    {% if date %}<p class="muted">{{ date | readableDate }}</p>{% endif %}
-  </div>
-</section>
 
-<section class="page-section">
-  <div class="container narrow content-page">
-    {{ content | safe }}
-    <p><a href="{{ '/updates/' | url }}">← Back to updates</a></p>
+<article class="post">
+  <div class="container narrow">
+    <p class="update-date">{{ date | readableDate }}</p>
+    <h1>{{ title }}</h1>
+
+    {% if image %}
+      <img class="post-hero-image" src="{{ image }}" alt="{{ imageAlt | default: title }}">
+    {% endif %}
+
+    <div class="post-content">
+      {{ content | safe }}
+    </div>
+
+    <p><a class="text-link" href="/WDR5/updates/">← Back to updates</a></p>
   </div>
-</section>
+</article>
