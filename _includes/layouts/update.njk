@@ -1,5 +1,17 @@
 ---
 layout: layouts/base.njk
 ---
-<section class="page-hero"><div class="container narrow"><p class="date">{{ date | readableDate }}</p><h1>{{ title }}</h1></div></section>
-<section class="section"><article class="container narrow prose">{{ content | safe }}<p><a href="/updates/">← Back to updates</a></p></article></section>
+<section class="page-hero">
+  <div class="container narrow">
+    <p class="eyebrow">Update</p>
+    <h1>{{ title }}</h1>
+    {% if date %}<p class="muted">{{ date | readableDate }}</p>{% endif %}
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container narrow content-page">
+    {{ content | safe }}
+    <p><a href="{{ '/updates/' | url }}">← Back to updates</a></p>
+  </div>
+</section>

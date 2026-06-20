@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title | default: "WDR5 Connect" }}</title>
-  <meta name="description" content="{{ description | default: "Connecting families affected by WDR5-related neurodevelopmental disorder." }}">
-  <link rel="stylesheet" href="/assets/styles.css">
+  <title>{{ title or "WDR5 Connect" }}</title>
+  <meta name="description" content="{{ description or 'Connecting families affected by WDR5-related neurodevelopmental disorder.' }}">
+  <link rel="stylesheet" href="{{ '/assets/styles.css' | url }}">
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="/">WDR5 Connect</a>
+      <a class="logo" href="{{ '/' | url }}">WDR5 Connect</a>
       <nav class="site-nav" aria-label="Main navigation">
-        <a href="/">Home</a>
-        <a href="/about/">About WDR5</a>
-        <a href="/story/">Our Story</a>
-        <a href="/updates/">Updates</a>
-        <a href="/resources/">Resources</a>
-        <a href="/contact/">Contact</a>
-        <a class="nav-button" href="/registry/">Join the Registry</a>
+        <a href="{{ '/' | url }}">Home</a>
+        <a href="{{ '/about/' | url }}">About WDR5</a>
+        <a href="{{ '/story/' | url }}">Our Story</a>
+        <a href="{{ '/updates/' | url }}">Updates</a>
+        <a href="{{ '/resources/' | url }}">Resources</a>
+        <a href="{{ '/contact/' | url }}">Contact</a>
+        <a class="nav-button" href="{{ '/registry/' | url }}">Join the Registry</a>
       </nav>
     </div>
   </header>
@@ -31,12 +31,12 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <strong>WDR5 Connect</strong>
-        <p>Connecting families, sharing lived experience and supporting research into WDR5-related neurodevelopmental disorder.</p>
+        <h3>WDR5 Connect</h3>
+        <p>Connecting families, sharing experiences and supporting research around WDR5-related disorder.</p>
       </div>
       <div>
-        <p><a href="/contact/">Contact us</a></p>
-        <p><a href="/registry/">Join the family registry</a></p>
+        <h3>Important</h3>
+        <p>This website shares family experiences and general information. It is not medical advice. Always speak to your doctor or genetics team.</p>
       </div>
     </div>
   </footer>
@@ -46,7 +46,7 @@
       window.netlifyIdentity.on("init", user => {
         if (!user) {
           window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
+            document.location.href = "{{ '/admin/' | url }}";
           });
         }
       });
