@@ -4,21 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WDR5 Connect</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/WDR5/assets/styles.css">
 </head>
 <body>
+
 <header class="site-header">
-  <div class="header-inner">
+  <div class="container header-inner">
     <a class="brand" href="/WDR5/">
       <span class="logo">♡</span>
-      <span class="brand-text">
+      <span class="brand-copy">
         <strong>WDR5 Connect</strong>
         <small>Connecting families. Sharing hope.</small>
       </span>
     </a>
+
     <nav class="site-nav" aria-label="Main navigation">
       <a href="/WDR5/">Home</a>
       <a href="/WDR5/about/">About WDR5</a>
@@ -26,18 +25,20 @@
       <a href="/WDR5/updates/">Updates</a>
       <a href="/WDR5/resources/">Resources</a>
       <a href="/WDR5/contact/">Contact</a>
-      <a class="button nav-button" href="/WDR5/registry/">Join the Registry</a>
+      <a class="nav-button" href="/WDR5/registry/">Join the Registry</a>
     </nav>
   </div>
 </header>
+
 <main>
   {{ content | safe }}
 </main>
+
 <footer class="site-footer">
-  <div class="container footer-inner">
+  <div class="container">
     <p>© 2026 WDR5 Connect. Family-led information, not medical advice.</p>
-    <p><a href="/WDR5/contact/">Contact us</a> · <a href="/WDR5/registry/">Join the registry</a></p>
   </div>
 </footer>
+
 </body>
 </html>
